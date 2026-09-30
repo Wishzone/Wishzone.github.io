@@ -1,14 +1,27 @@
 ---
-layout: archive
-title: "Portfolio"
+layout: default
+title: "项目实践"
+description: "Hider、WTSIMU、PWTS、YOLO 与 MSSP 项目介绍。"
 permalink: /portfolio/
-author_profile: true
 ---
 
-{% include base_path %}
-
-
-{% for post in site.portfolio %}
-  {% include archive-single.html %}
-{% endfor %}
-
+<main class="portfolio-site portfolio-index" id="main">
+  <div class="portfolio-intro">
+    <p class="site-eyebrow">PROJECTS / 01—05</p>
+    <h1>项目实践<span class="portfolio-intro__period">.</span></h1>
+    <p>从感知硬件与无线链路，到模型训练和推理系统。点击项目了解问题、实现路径和当前进展。</p>
+  </div>
+  <div class="project-grid">
+    {% for project in site.data.projects %}
+      <a class="project-card project-card--{{ project.slug }}" href="{{ '/portfolio/' | append: project.slug | append: '/' | relative_url }}" aria-label="查看 {{ project.name }} 项目详情">
+        <span class="project-card__top"><span>{{ project.number }} / {{ project.field }}</span><span aria-hidden="true">↗</span></span>
+        <span class="project-card__graphic" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="project-card__body">
+          <strong>{{ project.name }}</strong>
+          <span class="project-card__summary">{{ project.summary }}</span>
+          <span class="project-card__tags">{% for tag in project.tags limit:3 %}<em>{{ tag }}</em>{% endfor %}</span>
+        </span>
+      </a>
+    {% endfor %}
+  </div>
+</main>

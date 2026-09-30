@@ -1,0 +1,40 @@
+- slug: hider
+  number: "01"
+  name: Hider
+  field: 嵌入式产品
+  headline: 让运动感知与蓝牙交互协同工作
+  summary: 基于自研 PCB、nRF54L15 与六轴 IMU 的低功耗感知设备，连接固件、BLE HID 与授权服务。
+  status: 固件与服务流程已实现
+  tags: [nRF54L15, Zephyr, BLE HID]
+- slug: wtsimu
+  number: "02"
+  name: WTSIMU
+  field: 无线传感器
+  headline: 多节点无线惯性数据采集
+  summary: 面向多节点同步采集的无线六轴 IMU 系统，包含通用固件、BLE 网关与跨平台上位机。
+  status: 软件验证完成，真机联测进行中
+  tags: [IMU, BLE, Flutter]
+- slug: pwts
+  number: "03"
+  name: PWTS
+  field: 无线时间同步
+  headline: 在无线链路上对齐时间
+  summary: 基于 FPGA SDR 的高精度无线时间同步研究，围绕硬件时间戳、到达时间估计与时钟控制展开。
+  status: 原型与双板实验进行中
+  tags: [FPGA, SDR, 时间同步]
+- slug: yolo
+  number: "04"
+  name: YOLO
+  field: 计算机视觉
+  headline: 从数据集到边缘端模型
+  summary: 构建目标检测训练与部署流程，覆盖数据整理、模型训练、ONNX 导出和 RKNN 转换。
+  status: 训练与导出流程验证中
+  tags: [YOLO26, ONNX, RKNN]
+- slug: mssp
+  number: "05"
+  name: MSSP
+  field: 边缘智能
+  headline: 探索端云协同推测解码
+  summary: 基于 SpecEdge 工程开展端云协同推测解码实验，研究候选树调整、调度与评测方法。
+  status: 研究原型
+  tags: [LLM, 推测解码, 端云协同]

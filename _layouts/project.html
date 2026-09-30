@@ -1,0 +1,25 @@
+---
+layout: default
+---
+{% assign project = site.data.projects | where: "slug", page.project_key | first %}
+<main class="portfolio-site project-detail" id="main">
+  <a class="project-back" href="{{ '/portfolio/' | relative_url }}"><span aria-hidden="true">←</span> 返回项目列表</a>
+  <header class="project-detail__hero project-detail__hero--{{ project.slug }}">
+    <div class="project-detail__hero-copy">
+      <p class="site-eyebrow">PROJECT {{ project.number }} / {{ project.field }}</p>
+      <h1>{{ project.name }}</h1>
+      <p class="project-detail__headline">{{ project.headline }}</p>
+      <p class="project-detail__summary">{{ project.summary }}</p>
+    </div>
+    <span class="project-detail__monogram" aria-hidden="true">{{ project.number }}</span>
+  </header>
+  <div class="project-detail__meta">
+    <div><span>当前进展</span><strong>{{ project.status }}</strong></div>
+    <div><span>技术领域</span><strong>{{ project.tags | join: ' · ' }}</strong></div>
+  </div>
+  <div class="project-detail__content">{{ content }}</div>
+  <nav class="project-detail__footer" aria-label="项目导航">
+    <a href="{{ '/portfolio/' | relative_url }}">浏览其他项目 <span aria-hidden="true">↗</span></a>
+    <a href="mailto:{{ site.author.email }}">交流这个项目 <span aria-hidden="true">↗</span></a>
+  </nav>
+</main>
