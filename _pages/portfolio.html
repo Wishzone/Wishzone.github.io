@@ -1,27 +1,24 @@
 ---
-layout: default
-title: "项目实践"
-description: "Hider、WTSIMU、PWTS、YOLO 与 MSSP 项目介绍。"
+layout: archive
+title: "研究项目"
+description: "Wishzone 的无线时间同步、嵌入式感知与边缘智能项目。"
 permalink: /portfolio/
+author_profile: true
 ---
 
-<main class="portfolio-site portfolio-index" id="main">
-  <div class="portfolio-intro">
-    <p class="site-eyebrow">PROJECTS / 01—05</p>
-    <h1>项目实践<span class="portfolio-intro__period">.</span></h1>
-    <p>从感知硬件与无线链路，到模型训练和推理系统。点击项目了解问题、实现路径和当前进展。</p>
-  </div>
-  <div class="project-grid">
+<div class="academic-portfolio">
+  <p class="academic-portfolio__intro">以下项目覆盖无线时间同步、嵌入式传感、计算机视觉与端云协同推理。各详情页记录研究问题、实现工作和当前进展。</p>
+  <ol class="academic-project-list academic-project-list--archive">
     {% for project in site.data.projects %}
-      <a class="project-card project-card--{{ project.slug }}" href="{{ '/portfolio/' | append: project.slug | append: '/' | relative_url }}" aria-label="查看 {{ project.name }} 项目详情">
-        <span class="project-card__top"><span>{{ project.number }} / {{ project.field }}</span><span aria-hidden="true">↗</span></span>
-        <span class="project-card__graphic" aria-hidden="true"><span></span><span></span><span></span></span>
-        <span class="project-card__body">
-          <strong>{{ project.name }}</strong>
-          <span class="project-card__summary">{{ project.summary }}</span>
-          <span class="project-card__tags">{% for tag in project.tags limit:3 %}<em>{{ tag }}</em>{% endfor %}</span>
-        </span>
-      </a>
+    <li>
+      <span class="academic-project-list__number">{{ project.number }}</span>
+      <div>
+        <p class="academic-project-list__field">{{ project.field }}</p>
+        <h2><a href="{{ '/portfolio/' | append: project.slug | append: '/' | relative_url }}">{{ project.name }} <span aria-hidden="true">↗</span></a></h2>
+        <p>{{ project.summary }}</p>
+        <span class="academic-project-list__meta">{{ project.status }} · {{ project.tags | join: ' / ' }}</span>
+      </div>
+    </li>
     {% endfor %}
-  </div>
-</main>
+  </ol>
+</div>

@@ -20,5 +20,5 @@
 {% endif %}
 
 <div class="page__footer-copyright">
-  &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }} · 用作品记录思考与实践。
+  &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }} · {{ site.author.employer }} · <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
 </div>

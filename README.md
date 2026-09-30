@@ -1,6 +1,6 @@
 # Wishzone 个人网站
 
-基于 Jekyll 与 Academic Pages 主题构建的个人项目网站，展示 Hider、WTSIMU、PWTS、YOLO 和 MSSP 等工程与研究实践。
+基于 Jekyll 与 Academic Pages 主题构建的学术个人主页，展示研究方向及 Hider、WTSIMU、PWTS、YOLO、MSSP 等项目。
 
 ## 内容位置
 
@@ -8,8 +8,9 @@
 - 项目列表：`_pages/portfolio.html`
 - 项目卡片资料：`_data/projects.yml`
 - 项目详情：`_portfolio/*.md`
-- 页面样式：`_sass/layout/_portfolio_site.scss`
+- 页面样式：`_sass/layout/_academic_site.scss`
 - 导航：`_data/navigation.yml`
+- 待补充的个人资料：`PROFILE_CONTENT_CHECKLIST.md`
 
 新增项目时，在 `_data/projects.yml` 中加入一条资料，并在 `_portfolio/` 下创建同名 Markdown 文件。详情页的 `project_key`、`permalink` 应与资料中的 `slug` 对应。
 

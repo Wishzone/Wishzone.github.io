@@ -10,7 +10,7 @@ permalink: /portfolio/hider/
 
 Hider 将运动检测、蓝牙 HID 交互与设备授权整合在一块自研 PCB 上。设备采用 nRF54L15 与 LSM6DSV16X；固件根据运动状态切换 IMU 的低功耗唤醒与精细采样模式，在确认目标动作后发送预设快捷键。
 
-## 我的工作
+## 研究与实现
 
 - 开发基于 Nordic Connect SDK / Zephyr 的板级固件，完成 IMU 驱动、运动判定、功耗状态切换与 BLE HID 服务。
 - 构建设备授权流程，连接固件、浏览器入口与 FastAPI 服务端，并整理工厂登记和维护脚本。

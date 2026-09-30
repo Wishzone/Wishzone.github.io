@@ -1,9 +1,9 @@
 main:
   - title: "首页"
     url: /
-  - title: "项目"
+  - title: "研究方向"
+    url: /#research
+  - title: "研究项目"
     url: /portfolio/
-  - title: "关于"
-    url: /#about
   - title: "联系"
     url: /#contact
